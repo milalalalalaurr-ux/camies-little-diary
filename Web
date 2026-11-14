@@ -1,0 +1,912 @@
+
+<!DOCTYPE html>
+<html lang="en">
+.☘︎.⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･༘˚⋆𐙚｡⋆𖦹.✧˚⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･༘˚⋆.☘︎.
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camie's Little Diary ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+  --theme-color: #f8dce5;
+  --font-family: "DM Sans", sans-serif;
+  --font-color: #6b4b55;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+  margin: 0;
+  background: color-mix(in srgb, var(--theme-color) 15%, white);
+  font-family: var(--font-family);
+  color: var(--font-color);
+    }
+
+    
+header {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 280px;
+  background-color: var(--theme-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px dashed #d9a9b9;
+}
+
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 42px;
+      font-weight: normal;
+      margin: 0;
+      color: #FFFFFF;
+    }
+
+    header p {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 16px;
+      background: #fffaf9;
+    }
+
+    nav a {
+      color: #a45e78;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .welcome h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      font-weight: normal;
+    }
+
+    .profile-card {
+      background: #fffafa;
+      border: 1px solid #efd4dc;
+      border-radius: 12px;
+      padding: 25px 18px;
+      text-align: center;
+      margin-bottom: 35px;
+      box-shadow: 4px 5px 0 #f1d8df;
+    }
+
+    .profile-picture {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 12px;
+      border: 5px solid #f5dce5;
+      padding: 3px;
+      background: white;
+    }
+
+    .profile-name {
+      font-family: 'DM Serif Display', serif;
+      color: #a45e78;
+      font-size: 27px;
+      margin: 12px 0 3px;
+    }
+
+    .profile-username {
+      color: #bd8b9e;
+      font-size: 12px;
+    }
+
+    .profile-bio {
+      font-size: 13px;
+      line-height: 1.8;
+      max-width: 300px;
+      margin: 15px auto;
+    }
+
+    .profile-stats {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 18px;
+      font-size: 12px;
+    }
+
+    .profile-stats strong {
+      display: block;
+      color: #a45e78;
+      font-size: 17px;
+    }
+
+    .profile-button {
+      display: inline-block;
+      background: #f4dce5;
+      color: #965b73;
+      padding: 10px 22px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .post {
+      background: white;
+      padding: 22px;
+      border: 1px solid #efd4dc;
+      border-radius: 8px;
+      box-shadow: 4px 5px 0 #f1d8df;
+      margin-bottom: 25px;
+      transform: rotate(-1deg);
+    }
+
+    .post img {
+      display: block;
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border: 7px solid white;
+      box-shadow: 0 2px 8px #ead5dc;
+      margin: 12px 0;
+      border-radius: 5px;
+    }
+
+    .post h3 {
+      font-family: 'DM Serif Display', serif;
+      color: #a45e78;
+      font-size: 25px;
+    }
+
+    .date {
+      font-size: 11px;
+      color: #b98b9b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #b98b9b;
+      font-size: 12px;
+    }
+    button {
+  background-color: var(--theme-color);
+  color: var(--font-color);
+  border: 1px solid #d9a9b9;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+    #admin-open-button {
+  display: none;
+    }
+    /* Comment Section */
+#comments-section {
+  background: #fff5f7;
+  border: 1px dashed #e8b9ca;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Comment Form */
+#comment-form {
+  background: white;
+  border: 1px solid #f0d5df;
+  border-radius: 14px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+/* Comment Input */
+#comment-form input,
+#comment-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 7px 0;
+  border: 1px solid #e8c5d2;
+  border-radius: 10px;
+  background: #fffafd;
+  font-family: var(--font-family);
+  color: var(--font-color);
+  outline: none;
+}
+
+/* Comment Button */
+#comment-form button {
+  background: var(--theme-color);
+  color: var(--font-color);
+  border: 1px solid #e8c5d2;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-family: var(--font-family);
+}
+
+/* Individual Comments */
+.comment-item {
+  background: white;
+  border: 1px solid #f0d5df;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+    
+#comments-list {
+  display: flex !important;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#comments-list .comment-item {
+  display: block !important;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  background: #ffffff !important;
+  border: 1px solid #e8b9ca !important;
+  border-radius: 15px !important;
+  box-shadow: 0 3px 8px #e8b9ca33;
+  overflow-wrap: anywhere;
+}
+
+#comments-list .comment-item p {
+  margin-bottom: 0;
+}
+#comments-list .comment-item {
+  background: #ffffff !important;
+  border: 2px solid #e8b9ca !important;
+  border-radius: 18px !important;
+  padding: 20px !important;
+  margin: 15px 0 !important;
+  box-shadow: 0 5px 15px rgba(180, 120, 145, 0.15) !important;
+  min-height: 65px;
+}
+
+#comments-list .comment-item strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #a45f7a;
+}
+
+#comments-list .comment-item p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+    
+  </style>
+
+
+</head>
+<body>
+
+<header class="hero">
+  <h1>Camie's Little Diary ♡</h1>
+  <p>A little place for my little memories.</p>
+</header>
+
+<main>
+  <section class="welcome">
+    <h2>Welcome to my diary!</h2>
+    <p>A tiny corner of the internet, filled with little pieces of my life.</p>
+  </section>
+
+  <section class="profile-card">
+    <img
+      id="profile-avatar"
+      class="profile-picture"
+      src="https://placehold.co/150x150/f5dce5/9b6077?text=Camie"
+      alt="Camie's profile picture"
+    >
+
+    <h2 id="profile-name">Camie</h2>
+    <p id="profile-username">@camie</p>
+    <p id="profile-bio">Collecting little moments ♡</p>
+  </section>
+
+  <section class="diary-section">
+    <h2>My Memories ♡</h2>
+    <p class="section-subtitle">Little moments I want to keep.</p>
+
+    <p id="posts-loading">Loading memories...</p>
+    <div id="posts-container"></div>
+  </section>
+</main>
+
+<!-- Comment Section -->
+
+  </section>  <footer>
+    Made with love by Camie ♡
+  </footer>
+  <button id="admin-open" aria-label="Open admin login">♡</button>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://xksvlpxolthsmtwviqtu.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+  "sb_publishable_H0BMrkQVv4TI90ZrkARktA__Bhfhg7J";
+
+const ADMIN_UID = "d5a66dc0-d3cc-45aa-8667-0f141b9898e7";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+
+console.log("Camie's Little Diary connected!");
+</script>
+
+  
+<style>
+#admin-open {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #d98eaa;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #0002;
+  z-index: 100;
+}
+
+.admin-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  z-index: 200;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.admin-box {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff9fb;
+  border-radius: 18px;
+  color: #70485a;
+}
+
+.admin-box h2,
+.admin-box h3 {
+  color: #a45e78;
+}
+
+.admin-box input,
+.admin-box textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #e8c5d2;
+  border-radius: 10px;
+  background: white;
+  font: inherit;
+}
+
+.admin-box textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.admin-box button {
+  padding: 10px 16px;
+  margin: 5px 4px 5px 0;
+  border: none;
+  border-radius: 10px;
+  background: #d98eaa;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.admin-box button.secondary {
+  background: #b9a0aa;
+}
+
+.admin-option {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid #efd5df;
+  border-radius: 14px;
+  background: white;
+}
+
+.admin-message {
+  font-size: 13px;
+  color: #bd7894;
+  overflow-wrap: anywhere;
+}
+
+#image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#image-preview img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+</style>
+
+<div id="admin-overlay" class="admin-overlay">
+
+  <div class="admin-box">
+
+    <div id="login-panel">
+      <h2>Welcome back, Camie ♡</h2>
+      <p>Login to manage your little diary.</p>
+
+      <form id="login-form">
+        <input
+          id="login-email"
+          type="email"
+          placeholder="Email address"
+          required
+        >
+
+        <input
+          id="login-password"
+          type="password"
+          placeholder="Password"
+          required
+        >
+
+        <button type="submit">Login ♡</button>
+        <button type="button" class="secondary" id="close-login">
+          Cancel
+        </button>
+      </form>
+
+      <p id="login-message" class="admin-message"></p>
+    </div>
+
+    <div id="dashboard-panel" style="display:none;">
+
+      <h2>Camie's Dashboard ♡</h2>
+      <p>Manage your little corner of the internet.</p>
+
+      <button type="button" id="back-to-site" class="secondary">
+        ← Back to website
+      </button>
+
+      <button type="button" id="logout-button" class="secondary">
+        Logout
+      </button>
+
+      <div class="admin-option">
+  <h3>♡ Customize Appearance</h3>
+
+  <form id="theme-form">
+
+    <label for="theme-color">Website Theme Color</label>
+    <input type="color" id="theme-color" value="#f8dce5">
+
+    <label for="font-family">Font Style</label>
+    <select id="font-family">
+      <option value="DM Sans">DM Sans</option>
+      <option value="Quicksand">Quicksand</option>
+      <option value="Poppins">Poppins</option>
+      <option value="Playfair Display">Playfair Display</option>
+      <option value="Georgia">Georgia</option>
+    </select>
+
+    <label for="font-color">Font Color</label>
+    <input type="color" id="font-color" value="#6b4b55">
+
+    <button type="submit">Save Appearance ♡</button>
+  </form>
+
+  <p id="theme-message" class="admin-message"></p>
+      </div>
+      
+<div class="admin-option">
+  <h3>♡ Edit My Profile</h3>
+
+  <form id="profile-form">
+
+    <label for="profile-edit-name">Display name</label>
+    <input
+      id="profile-edit-name"
+      type="text"
+      placeholder="Your name"
+      required
+    >
+
+    <label for="profile-edit-username">Username</label>
+    <input
+      id="profile-edit-username"
+      type="text"
+      placeholder="@username"
+    >
+
+    <label for="profile-edit-bio">Bio</label>
+    <textarea
+      id="profile-edit-bio"
+      placeholder="Write something about yourself..."
+    ></textarea>
+
+    <label for="profile-edit-avatar">Profile picture</label>
+    <input
+      id="profile-edit-avatar"
+      type="file"
+      accept="image/*"
+    >
+
+    <label for="profile-edit-hero">Website background image</label>
+    <input
+      id="profile-edit-hero"
+      type="file"
+      accept="image/*"
+    >
+
+    <button type="submit">
+      Save Profile ♡
+    </button>
+
+  </form>
+
+  <p id="profile-message" class="admin-message"></p>
+</div>
+
+
+      
+<div class="admin-option">
+  <h3>♡ Create a Little Memory</h3>
+
+  <form id="post-form">
+
+    <label>Post Title</label>
+    <input
+      type="text"
+      id="post-title"
+      placeholder="Give your memory a title..."
+      required
+    >
+
+    <label>Your Story</label>
+    <textarea
+      id="post-body"
+      placeholder="Write your little story..."
+      required
+    ></textarea>
+
+    <label>Photos</label>
+    <input
+      type="file"
+      id="post-images"
+      accept="image/*"
+      multiple
+    >
+
+    <div id="image-preview"></div>
+
+    <hr>
+
+    <h3>♡ Music Player</h3>
+
+    <label>Song Title</label>
+    <input
+      type="text"
+      id="audio-title"
+      placeholder="Song title"
+    >
+
+    <label>Artist</label>
+    <input
+      type="text"
+      id="audio-artist"
+      placeholder="Artist name"
+    >
+
+    <label>Upload MP3</label>
+    <input
+      type="file"
+      id="audio-file"
+      accept="audio/mpeg,audio/mp3"
+    >
+
+    <label>Player Design</label>
+    
+<select id="audio-style">
+  <option value="coquette">Coquette Pink</option>
+  <option value="lavender">Lavender Dream</option>
+  <option value="blue">Baby Blue Retro</option>
+  <option value="green">Matcha Garden</option>
+  <option value="yellow">Buttercup Sunshine</option>
+</select>
+
+
+    <label>Player Color</label>
+    <input
+      type="color"
+      id="audio-color"
+      value="#f4c5d5"
+    >
+
+    <button type="submit" id="save-post-button">
+      Save Memory ♡
+    </button>
+
+  </form>
+
+  <p id="post-message" class="admin-message"></p>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+  
+<script>
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+const overlay = document.getElementById("admin-overlay");
+const loginPanel = document.getElementById("login-panel");
+const dashboardPanel = document.getElementById("dashboard-panel");
+
+document.getElementById("admin-open").addEventListener("click", async () => {
+  overlay.style.display = "block";
+
+  const { data } = await supabaseClient.auth.getSession();
+  const user = data.session?.user;
+
+  if (user && user.id === ADMIN_UID) {
+    showDashboard();
+  } else {
+    loginPanel.style.display = "block";
+    dashboardPanel.style.display = "none";
+  }
+});
+
+document.getElementById("close-login").addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+document.getElementById("back-to-site").addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+function showDashboard() {
+  loginPanel.style.display = "none";
+  dashboardPanel.style.display = "block";
+  loadProfileEditor();
+}
+
+document.getElementById("login-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const message = document.getElementById("login-message");
+  message.textContent = "Logging in...";
+
+  const email = document.getElementById("login-email").value;
+  const password = document.getElementById("login-password").value;
+
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  if (error) {
+    message.textContent = "Login failed: " + error.message;
+    return;
+  }
+
+  if (data.user.id !== ADMIN_UID) {
+    await supabaseClient.auth.signOut();
+    message.textContent = "You are not authorized.";
+    return;
+  }
+
+  message.textContent = "";
+  document.getElementById("login-form").reset();
+  showDashboard();
+});
+
+document.getElementById("logout-button").addEventListener("click", async () => {
+  await supabaseClient.auth.signOut();
+
+  dashboardPanel.style.display = "none";
+  loginPanel.style.display = "block";
+  overlay.style.display = "none";
+  
+});
+
+function updateAdminButton() {
+  supabaseClient.auth.getSession().then(({ data }) => {
+    const user = data.session?.user;
+    const adminButton = document.getElementById("admin-open");
+
+  });
+}
+/* =========================
+   RESTORE LOGIN SESSION
+========================= */
+
+async function checkAdminSession() {
+  const { data } = await supabaseClient.auth.getSession();
+  const user = data.session?.user;
+
+  if (user && user.id === ADMIN_UID) {
+    showDashboard();
+  }
+}
+
+checkAdminSession();
+
+
+/* =========================
+   PHOTO PREVIEW
+========================= */
+
+document.getElementById("post-images").addEventListener("change", (event) => {
+  const preview = document.getElementById("image-preview");
+  preview.innerHTML = "";
+
+  const files = Array.from(event.target.files);
+
+  files.forEach((file) => {
+    if (!file.type.startsWith("image/")) return;
+
+    const img = document.createElement("img");
+    img.src = URL.createObjectURL(file);
+    img.alt = "Photo preview";
+
+    preview.appendChild(img);
+  });
+});
+
+
+/* =========================
+   CREATE MEMORY + UPLOAD
+========================= */
+
+
+/* =========================
+   CREATE MEMORY + UPLOAD
+========================= */
+
+document.getElementById("post-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const form = event.target;
+  const message = document.getElementById("post-message");
+  const saveButton = document.getElementById("save-post-button");
+
+  const title = document.getElementById("post-title").value.trim();
+  const body = document.getElementById("post-body").value.trim();
+  const files = Array.from(document.getElementById("post-images").files);
+
+  const audioFile = document.getElementById("audio-file").files[0];
+  const audioTitle = document.getElementById("audio-title").value.trim();
+  const audioArtist = document.getElementById("audio-artist").value.trim();
+  const audioStyle = document.getElementById("audio-style").value;
+  const audioColor = document.getElementById("audio-color").value;
+
+  if (!title || !body) {
+    message.textContent = "Please fill in the title and story.";
+    return;
+  }
+
+  if (audioFile && !audioTitle) {
+    message.textContent = "Please enter the song title.";
+    return;
+  }
+
+  saveButton.disabled = true;
+  message.textContent = "Saving your memory... ♡";
+
+  try {
+    const { data: sessionData, error: sessionError } =
+      await supabaseClient.auth.getSession();
+
+    if (sessionError) throw sessionError;
+
+    const user = sessionData.session?.user;
+
+    if (!user || user.id !== ADMIN_UID) {
+      throw new Error("Please login as the website owner.");
+    }
+
+    // UPLOAD PHOTOS
+    const imageUrls = [];
+
+    for (const file of files) {
+      if (!file.type.startsWith("image/")) {
+        throw new Error("Please choose image files only.");
+      }
+
+      if (file.size > 8 * 1024 * 1024) {
+        throw new Error("Each photo must be smaller than 8 MB.");
+      }
+
+      const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const path = `${user.id}/${Date.now()}-${Math.random().toString(36).slice(2)}-${safeName}`;
+
+      const { error: uploadError } = await supabaseClient
+        .storage
+        .from("Diary-file")
+        .upload(path, file, {
+          cacheControl: "3600",
+          upsert: false
+        });
+
+      if (uploadError) throw uploadError;
+
+      const { data: publicData } = supabaseClient
+        .storage
+        .from("Diary-file")
+        .getPublicUrl(path);
+
+      imageUrls.push(publicData.publicUrl);
+    }
+
+    // UPLOAD MP3
+    let audioUrl = null;
+
+    if (audioFile) {
+      if (!audioFile.type.startsWith("audio/")) {
+        throw new Error("Please choose an audio file.");
+      }
+
+      if (audioFile.size > 15 * 1024 * 1024) {
+        throw new Error("MP3 must be smaller than 15 MB.");
+      }
+
+      const safeAudioName = audioFile.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const audioPath = `${user.id}/audio-${Date.now()}-${safeAudioName}`;
+
+      const { error: audioUploadError } = await supabaseClient
+        .storage
+        .from("Diary-file")
+        .upload(audioPath, audioFile, {
+          cacheControl: "3600",
+          upsert: false
+      
