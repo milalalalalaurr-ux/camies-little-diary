@@ -1,0 +1,1690 @@
+
+<!DOCTYPE html>
+<html lang="en">
+.☘︎.⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･༘˚⋆𐙚｡⋆𖦹.✧˚⋆.ೃ࿔*:･°❀⋆.ೃ࿔*:･༘˚⋆.☘︎.
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Camie's Little Diary ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+  --theme-color: #f8dce5;
+  --font-family: "DM Sans", sans-serif;
+  --font-color: #6b4b55;
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+  margin: 0;
+  background: color-mix(in srgb, var(--theme-color) 15%, white);
+  font-family: var(--font-family);
+  color: var(--font-color);
+    }
+
+    
+header {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 280px;
+  background-color: var(--theme-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 2px dashed #d9a9b9;
+}
+
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 42px;
+      font-weight: normal;
+      margin: 0;
+      color: #FFFFFF;
+    }
+
+    header p {
+      font-size: 13px;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      padding: 16px;
+      background: #fffaf9;
+    }
+
+    nav a {
+      color: #a45e78;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    main {
+      max-width: 700px;
+      margin: 35px auto;
+      padding: 0 20px;
+    }
+
+    .welcome {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .welcome h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      font-weight: normal;
+    }
+
+    .profile-card {
+      background: #fffafa;
+      border: 1px solid #efd4dc;
+      border-radius: 12px;
+      padding: 25px 18px;
+      text-align: center;
+      margin-bottom: 35px;
+      box-shadow: 4px 5px 0 #f1d8df;
+    }
+
+    .profile-picture {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      margin: 0 auto 12px;
+      border: 5px solid #f5dce5;
+      padding: 3px;
+      background: white;
+    }
+
+    .profile-name {
+      font-family: 'DM Serif Display', serif;
+      color: #a45e78;
+      font-size: 27px;
+      margin: 12px 0 3px;
+    }
+
+    .profile-username {
+      color: #bd8b9e;
+      font-size: 12px;
+    }
+
+    .profile-bio {
+      font-size: 13px;
+      line-height: 1.8;
+      max-width: 300px;
+      margin: 15px auto;
+    }
+
+    .profile-stats {
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      margin-top: 18px;
+      font-size: 12px;
+    }
+
+    .profile-stats strong {
+      display: block;
+      color: #a45e78;
+      font-size: 17px;
+    }
+
+    .profile-button {
+      display: inline-block;
+      background: #f4dce5;
+      color: #965b73;
+      padding: 10px 22px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    .post {
+      background: white;
+      padding: 22px;
+      border: 1px solid #efd4dc;
+      border-radius: 8px;
+      box-shadow: 4px 5px 0 #f1d8df;
+      margin-bottom: 25px;
+      transform: rotate(-1deg);
+    }
+
+    .post img {
+      display: block;
+      width: 100%;
+      max-height: 350px;
+      object-fit: cover;
+      border: 7px solid white;
+      box-shadow: 0 2px 8px #ead5dc;
+      margin: 12px 0;
+      border-radius: 5px;
+    }
+
+    .post h3 {
+      font-family: 'DM Serif Display', serif;
+      color: #a45e78;
+      font-size: 25px;
+    }
+
+    .date {
+      font-size: 11px;
+      color: #b98b9b;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #b98b9b;
+      font-size: 12px;
+    }
+    button {
+  background-color: var(--theme-color);
+  color: var(--font-color);
+  border: 1px solid #d9a9b9;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-family: var(--font-family);
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+    #admin-open-button {
+  display: none;
+    }
+    /* Comment Section */
+#comments-section {
+  background: #fff5f7;
+  border: 1px dashed #e8b9ca;
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Comment Form */
+#comment-form {
+  background: white;
+  border: 1px solid #f0d5df;
+  border-radius: 14px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+/* Comment Input */
+#comment-form input,
+#comment-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  margin: 7px 0;
+  border: 1px solid #e8c5d2;
+  border-radius: 10px;
+  background: #fffafd;
+  font-family: var(--font-family);
+  color: var(--font-color);
+  outline: none;
+}
+
+/* Comment Button */
+#comment-form button {
+  background: var(--theme-color);
+  color: var(--font-color);
+  border: 1px solid #e8c5d2;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-family: var(--font-family);
+}
+
+/* Individual Comments */
+.comment-item {
+  background: white;
+  border: 1px solid #f0d5df;
+  border-radius: 12px;
+  padding: 14px;
+  margin-top: 12px;
+  overflow-wrap: anywhere;
+}
+    
+#comments-list {
+  display: flex !important;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+#comments-list .comment-item {
+  display: block !important;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  background: #ffffff !important;
+  border: 1px solid #e8b9ca !important;
+  border-radius: 15px !important;
+  box-shadow: 0 3px 8px #e8b9ca33;
+  overflow-wrap: anywhere;
+}
+
+#comments-list .comment-item p {
+  margin-bottom: 0;
+}
+#comments-list .comment-item {
+  background: #ffffff !important;
+  border: 2px solid #e8b9ca !important;
+  border-radius: 18px !important;
+  padding: 20px !important;
+  margin: 15px 0 !important;
+  box-shadow: 0 5px 15px rgba(180, 120, 145, 0.15) !important;
+  min-height: 65px;
+}
+
+#comments-list .comment-item strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #a45f7a;
+}
+
+#comments-list .comment-item p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+  </style>
+
+
+</head>
+<body>
+
+<header class="hero">
+  <h1>Camie's Little Diary ♡</h1>
+  <p>A little place for my little memories.</p>
+</header>
+
+<main>
+  <section class="welcome">
+    <h2>Welcome to my diary!</h2>
+    <p>A tiny corner of the internet, filled with little pieces of my life.</p>
+  </section>
+
+  <section class="profile-card">
+    <img
+      id="profile-avatar"
+      class="profile-picture"
+      src="https://placehold.co/150x150/f5dce5/9b6077?text=Camie"
+      alt="Camie's profile picture"
+    >
+
+    <h2 id="profile-name">Camie</h2>
+    <p id="profile-username">@camie</p>
+    <p id="profile-bio">Collecting little moments ♡</p>
+  </section>
+
+  <section class="diary-section">
+    <h2>My Memories ♡</h2>
+    <p class="section-subtitle">Little moments I want to keep.</p>
+
+    <p id="posts-loading">Loading memories...</p>
+    <div id="posts-container"></div>
+  </section>
+</main>
+
+<!-- Comment Section -->
+
+  </section>  <footer>
+    Made with love by Camie ♡
+  </footer>
+  <button id="admin-open" aria-label="Open admin login">♡</button>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+const SUPABASE_URL = "https://xksvlpxolthsmtwviqtu.supabase.co";
+
+const SUPABASE_PUBLISHABLE_KEY =
+  "sb_publishable_H0BMrkQVv4TI90ZrkARktA__Bhfhg7J";
+
+const ADMIN_UID = "d5a66dc0-d3cc-45aa-8667-0f141b9898e7";
+
+const supabaseClient = window.supabase.createClient(
+  SUPABASE_URL,
+  SUPABASE_PUBLISHABLE_KEY
+);
+
+console.log("Camie's Little Diary connected!");
+</script>
+
+  
+<style>
+#admin-open {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: #d98eaa;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px #0002;
+  z-index: 100;
+}
+
+.admin-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: #0008;
+  z-index: 200;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.admin-box {
+  max-width: 650px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff9fb;
+  border-radius: 18px;
+  color: #70485a;
+}
+
+.admin-box h2,
+.admin-box h3 {
+  color: #a45e78;
+}
+
+.admin-box input,
+.admin-box textarea {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #e8c5d2;
+  border-radius: 10px;
+  background: white;
+  font: inherit;
+}
+
+.admin-box textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.admin-box button {
+  padding: 10px 16px;
+  margin: 5px 4px 5px 0;
+  border: none;
+  border-radius: 10px;
+  background: #d98eaa;
+  color: white;
+  cursor: pointer;
+  font: inherit;
+}
+
+.admin-box button.secondary {
+  background: #b9a0aa;
+}
+
+.admin-option {
+  margin-top: 22px;
+  padding: 18px;
+  border: 1px solid #efd5df;
+  border-radius: 14px;
+  background: white;
+}
+
+.admin-message {
+  font-size: 13px;
+  color: #bd7894;
+  overflow-wrap: anywhere;
+}
+
+#image-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+#image-preview img {
+  width: 85px;
+  height: 85px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+</style>
+
+<div id="admin-overlay" class="admin-overlay">
+
+  <div class="admin-box">
+
+    <div id="login-panel">
+      <h2>Welcome back, Camie ♡</h2>
+      <p>Login to manage your little diary.</p>
+
+      <form id="login-form">
+        <input
+          id="login-email"
+          type="email"
+          placeholder="Email address"
+          required
+        >
+
+        <input
+          id="login-password"
+          type="password"
+          placeholder="Password"
+          required
+        >
+
+        <button type="submit">Login ♡</button>
+        <button type="button" class="secondary" id="close-login">
+          Cancel
+        </button>
+      </form>
+
+      <p id="login-message" class="admin-message"></p>
+    </div>
+
+    <div id="dashboard-panel" style="display:none;">
+
+      <h2>Camie's Dashboard ♡</h2>
+      <p>Manage your little corner of the internet.</p>
+
+      <button type="button" id="back-to-site" class="secondary">
+        ← Back to website
+      </button>
+
+      <button type="button" id="logout-button" class="secondary">
+        Logout
+      </button>
+
+      <div class="admin-option">
+  <h3>♡ Customize Appearance</h3>
+
+  <form id="theme-form">
+
+    <label for="theme-color">Website Theme Color</label>
+    <input type="color" id="theme-color" value="#f8dce5">
+
+    <label for="font-family">Font Style</label>
+    <select id="font-family">
+      <option value="DM Sans">DM Sans</option>
+      <option value="Quicksand">Quicksand</option>
+      <option value="Poppins">Poppins</option>
+      <option value="Playfair Display">Playfair Display</option>
+      <option value="Georgia">Georgia</option>
+    </select>
+
+    <label for="font-color">Font Color</label>
+    <input type="color" id="font-color" value="#6b4b55">
+
+    <button type="submit">Save Appearance ♡</button>
+  </form>
+
+  <p id="theme-message" class="admin-message"></p>
+      </div>
+      
+<div class="admin-option">
+  <h3>♡ Edit My Profile</h3>
+
+  <form id="profile-form">
+
+    <label for="profile-edit-name">Display name</label>
+    <input
+      id="profile-edit-name"
+      type="text"
+      placeholder="Your name"
+      required
+    >
+
+    <label for="profile-edit-username">Username</label>
+    <input
+      id="profile-edit-username"
+      type="text"
+      placeholder="@username"
+    >
+
+    <label for="profile-edit-bio">Bio</label>
+    <textarea
+      id="profile-edit-bio"
+      placeholder="Write something about yourself..."
+    ></textarea>
+
+    <label for="profile-edit-avatar">Profile picture</label>
+    <input
+      id="profile-edit-avatar"
+      type="file"
+      accept="image/*"
+    >
+
+    <label for="profile-edit-hero">Website background image</label>
+    <input
+      id="profile-edit-hero"
+      type="file"
+      accept="image/*"
+    >
+
+    <button type="submit">
+      Save Profile ♡
+    </button>
+
+  </form>
+
+  <p id="profile-message" class="admin-message"></p>
+</div>
+
+
+      
+<div class="admin-option">
+  <h3>♡ Create a Little Memory</h3>
+
+  <form id="post-form">
+
+    <label>Post Title</label>
+    <input
+      type="text"
+      id="post-title"
+      placeholder="Give your memory a title..."
+      required
+    >
+
+    <label>Your Story</label>
+    <textarea
+      id="post-body"
+      placeholder="Write your little story..."
+      required
+    ></textarea>
+
+    <label>Photos</label>
+    <input
+      type="file"
+      id="post-images"
+      accept="image/*"
+      multiple
+    >
+
+    <div id="image-preview"></div>
+
+    <hr>
+
+    <h3>♡ Music Player</h3>
+
+    <label>Song Title</label>
+    <input
+      type="text"
+      id="audio-title"
+      placeholder="Song title"
+    >
+
+    <label>Artist</label>
+    <input
+      type="text"
+      id="audio-artist"
+      placeholder="Artist name"
+    >
+
+    <label>Upload MP3</label>
+    <input
+      type="file"
+      id="audio-file"
+      accept="audio/mpeg,audio/mp3"
+    >
+
+    <label>Player Design</label>
+    
+<select id="audio-style">
+  <option value="coquette">Coquette Pink</option>
+  <option value="lavender">Lavender Dream</option>
+  <option value="blue">Baby Blue Retro</option>
+  <option value="green">Matcha Garden</option>
+  <option value="yellow">Buttercup Sunshine</option>
+</select>
+
+
+    <label>Player Color</label>
+    <input
+      type="color"
+      id="audio-color"
+      value="#f4c5d5"
+    >
+
+    <button type="submit" id="save-post-button">
+      Save Memory ♡
+    </button>
+
+  </form>
+
+  <p id="post-message" class="admin-message"></p>
+</div>
+
+
+    </div>
+  </div>
+</div>
+
+  
+<script>
+/* =========================
+   ADMIN LOGIN
+========================= */
+
+const overlay = document.getElementById("admin-overlay");
+const loginPanel = document.getElementById("login-panel");
+const dashboardPanel = document.getElementById("dashboard-panel");
+
+document.getElementById("admin-open").addEventListener("click", async () => {
+  overlay.style.display = "block";
+
+  const { data } = await supabaseClient.auth.getSession();
+  const user = data.session?.user;
+
+  if (user && user.id === ADMIN_UID) {
+    showDashboard();
+  } else {
+    loginPanel.style.display = "block";
+    dashboardPanel.style.display = "none";
+  }
+});
+
+document.getElementById("close-login").addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+document.getElementById("back-to-site").addEventListener("click", () => {
+  overlay.style.display = "none";
+});
+
+function showDashboard() {
+  loginPanel.style.display = "none";
+  dashboardPanel.style.display = "block";
+  loadProfileEditor();
+}
+
+document.getElementById("login-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const message = document.getElementById("login-message");
+  message.textContent = "Logging in...";
+
+  const email = document.getElementById("login-email").value;
+  const password = document.getElementById("login-password").value;
+
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email,
+    password
+  });
+
+  if (error) {
+    message.textContent = "Login failed: " + error.message;
+    return;
+  }
+
+  if (data.user.id !== ADMIN_UID) {
+    await supabaseClient.auth.signOut();
+    message.textContent = "You are not authorized.";
+    return;
+  }
+
+  message.textContent = "";
+  document.getElementById("login-form").reset();
+  showDashboard();
+});
+
+document.getElementById("logout-button").addEventListener("click", async () => {
+  await supabaseClient.auth.signOut();
+
+  dashboardPanel.style.display = "none";
+  loginPanel.style.display = "block";
+  overlay.style.display = "none";
+});
+
+
+/* =========================
+   RESTORE LOGIN SESSION
+========================= */
+
+async function checkAdminSession() {
+  const { data } = await supabaseClient.auth.getSession();
+  const user = data.session?.user;
+
+  if (user && user.id === ADMIN_UID) {
+    showDashboard();
+  }
+}
+
+checkAdminSession();
+
+
+/* =========================
+   PHOTO PREVIEW
+========================= */
+
+document.getElementById("post-images").addEventListener("change", (event) => {
+  const preview = document.getElementById("image-preview");
+  preview.innerHTML = "";
+
+  const files = Array.from(event.target.files);
+
+  files.forEach((file) => {
+    if (!file.type.startsWith("image/")) return;
+
+    const img = document.createElement("img");
+    img.src = URL.createObjectURL(file);
+    img.alt = "Photo preview";
+
+    preview.appendChild(img);
+  });
+});
+
+
+/* =========================
+   CREATE MEMORY + UPLOAD
+========================= */
+
+
+/* =========================
+   CREATE MEMORY + UPLOAD
+========================= */
+
+document.getElementById("post-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const form = event.target;
+  const message = document.getElementById("post-message");
+  const saveButton = document.getElementById("save-post-button");
+
+  const title = document.getElementById("post-title").value.trim();
+  const body = document.getElementById("post-body").value.trim();
+  const files = Array.from(document.getElementById("post-images").files);
+
+  const audioFile = document.getElementById("audio-file").files[0];
+  const audioTitle = document.getElementById("audio-title").value.trim();
+  const audioArtist = document.getElementById("audio-artist").value.trim();
+  const audioStyle = document.getElementById("audio-style").value;
+  const audioColor = document.getElementById("audio-color").value;
+
+  if (!title || !body) {
+    message.textContent = "Please fill in the title and story.";
+    return;
+  }
+
+  if (audioFile && !audioTitle) {
+    message.textContent = "Please enter the song title.";
+    return;
+  }
+
+  saveButton.disabled = true;
+  message.textContent = "Saving your memory... ♡";
+
+  try {
+    const { data: sessionData, error: sessionError } =
+      await supabaseClient.auth.getSession();
+
+    if (sessionError) throw sessionError;
+
+    const user = sessionData.session?.user;
+
+    if (!user || user.id !== ADMIN_UID) {
+      throw new Error("Please login as the website owner.");
+    }
+
+    // UPLOAD PHOTOS
+    const imageUrls = [];
+
+    for (const file of files) {
+      if (!file.type.startsWith("image/")) {
+        throw new Error("Please choose image files only.");
+      }
+
+      if (file.size > 8 * 1024 * 1024) {
+        throw new Error("Each photo must be smaller than 8 MB.");
+      }
+
+      const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const path = `${user.id}/${Date.now()}-${Math.random().toString(36).slice(2)}-${safeName}`;
+
+      const { error: uploadError } = await supabaseClient
+        .storage
+        .from("Diary-file")
+        .upload(path, file, {
+          cacheControl: "3600",
+          upsert: false
+        });
+
+      if (uploadError) throw uploadError;
+
+      const { data: publicData } = supabaseClient
+        .storage
+        .from("Diary-file")
+        .getPublicUrl(path);
+
+      imageUrls.push(publicData.publicUrl);
+    }
+
+    // UPLOAD MP3
+    let audioUrl = null;
+
+    if (audioFile) {
+      if (!audioFile.type.startsWith("audio/")) {
+        throw new Error("Please choose an audio file.");
+      }
+
+      if (audioFile.size > 15 * 1024 * 1024) {
+        throw new Error("MP3 must be smaller than 15 MB.");
+      }
+
+      const safeAudioName = audioFile.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const audioPath = `${user.id}/audio-${Date.now()}-${safeAudioName}`;
+
+      const { error: audioUploadError } = await supabaseClient
+        .storage
+        .from("Diary-file")
+        .upload(audioPath, audioFile, {
+          cacheControl: "3600",
+          upsert: false
+        });
+
+      if (audioUploadError) throw audioUploadError;
+
+      const { data: audioPublicData } = supabaseClient
+        .storage
+        .from("Diary-file")
+        .getPublicUrl(audioPath);
+
+      audioUrl = audioPublicData.publicUrl;
+    }
+
+    // SAVE POST
+    const now = new Date().toISOString();
+
+    const { error: insertError } = await supabaseClient
+      .from("posts")
+      .insert({
+        title: title,
+        body: body,
+        owner_id: user.id,
+        image_paths: imageUrls,
+        audio_path: audioUrl,
+        audio_title: audioFile ? audioTitle : null,
+        audio_artist: audioFile ? audioArtist : null,
+        audio_style: audioFile ? audioStyle : null,
+        audio_color: audioFile ? audioColor : null,
+        created_at: now,
+        updated_at: now
+      });
+
+    if (insertError) throw insertError;
+
+    form.reset();
+    document.getElementById("image-preview").innerHTML = "";
+
+    message.textContent = "Your memory and music have been saved! ♡";
+
+    await loadPosts();
+
+  } catch (error) {
+    console.error("Post error:", error);
+    message.textContent = "Error: " + error.message;
+
+  } finally {
+    saveButton.disabled = false;
+  }
+});
+
+</script>
+
+  
+<script>
+/* =========================
+   LOAD COMMENTS
+========================= */
+
+async function loadComments(postId, container) {
+  container.innerHTML = "";
+
+  const heading = document.createElement("h4");
+  heading.textContent = "Comments ♡";
+  container.appendChild(heading);
+
+  const commentList = document.createElement("div");
+  container.appendChild(commentList);
+
+  const { data: comments, error } = await supabaseClient
+    .from("comments")
+    .select("*")
+    .eq("post_id", postId)
+    .order("created_at", { ascending: true });
+
+  if (error) {
+    const errorText = document.createElement("p");
+    errorText.textContent = "Comments could not be loaded.";
+    container.appendChild(errorText);
+    console.error("Comment loading error:", error);
+  } else {
+    (comments || []).forEach((comment) => {
+      const item = document.createElement("div");
+      item.style.padding = "10px 0";
+      item.style.borderBottom = "1px solid #f0dce4";
+
+      const author = document.createElement("strong");
+      author.textContent = comment.name || "Anonymous";
+
+      const text = document.createElement("p");
+      text.textContent = comment.body;
+
+      item.append(author, text);
+
+      commentList.appendChild(item);
+    });
+  }
+
+  const form = document.createElement("form");
+  form.style.marginTop = "15px";
+
+  const nameInput = document.createElement("input");
+  nameInput.type = "text";
+  nameInput.placeholder = "Your name (optional)";
+  nameInput.maxLength = 40;
+
+  const commentInput = document.createElement("textarea");
+  commentInput.placeholder = "Write a little comment...";
+  commentInput.required = true;
+  commentInput.maxLength = 1000;
+
+  const submitButton = document.createElement("button");
+  submitButton.type = "submit";
+  submitButton.textContent = "Send comment ♡";
+
+  const status = document.createElement("p");
+  status.className = "admin-message";
+
+  form.append(nameInput, commentInput, submitButton, status);
+  container.appendChild(form);
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const name = nameInput.value.trim() || "Anonymous";
+    const body = commentInput.value.trim();
+
+    if (!body) return;
+
+    submitButton.disabled = true;
+    status.textContent = "Sending...";
+
+    const { error: insertError } = await supabaseClient
+      .from("comments")
+      .insert({
+        post_id: postId,
+        name: name,
+        body: body
+      });
+
+    if (insertError) {
+      status.textContent = "Could not send comment: " + insertError.message;
+      submitButton.disabled = false;
+      return;
+    }
+
+    await loadComments(postId, container);
+  });
+}
+
+
+/* =========================
+   LOAD POSTS
+========================= */
+
+async function loadPosts() {
+  const container = document.getElementById("posts-container");
+  const loading = document.getElementById("posts-loading");
+
+  loading.textContent = "Loading memories...";
+  container.innerHTML = "";
+
+  const { data: posts, error } = await supabaseClient
+    .from("posts")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    loading.textContent = "Could not load memories.";
+    console.error("Post loading error:", error);
+    return;
+  }
+
+  loading.textContent = "";
+
+  if (!posts || posts.length === 0) {
+    loading.textContent = "No memories yet. Come back soon! ♡";
+    return;
+  }
+
+  posts.forEach((post) => {
+    const article = document.createElement("article");
+    article.className = "post";
+
+    const date = document.createElement("p");
+    date.className = "post-date";
+    date.textContent = new Date(post.created_at).toLocaleDateString(
+      "en-US",
+      {
+        year: "numeric",
+        month: "long",
+        day: "numeric"
+      }
+    );
+
+    const title = document.createElement("h3");
+    title.textContent = post.title || "Untitled memory";
+
+    const body = document.createElement("p");
+    body.textContent = post.body || "";
+
+    article.append(date, title, body);
+
+    // PHOTOS
+    (post.image_paths || []).forEach((url) => {
+      const img = document.createElement("img");
+      img.src = url;
+      img.alt = post.title || "Diary photo";
+      img.loading = "lazy";
+      article.appendChild(img);
+    });
+
+    // MUSIC PLAYER
+    if (post.audio_path) {
+      const player = document.createElement("div");
+      player.className = "music-player";
+
+      const style = post.audio_style || "coquette";
+      const color = post.audio_color || "#f4c5d5";
+
+      
+const designs = {
+  coquette: {
+    symbol: "♡",
+    background: `linear-gradient(135deg, ${color}, #fff5f8)`,
+    border: "2px dashed #d99bb3"
+  },
+  lavender: {
+    symbol: "✧",
+    background: `linear-gradient(135deg, ${color}, #f4efff)`,
+    border: "2px solid #c8b6e8"
+  },
+  blue: {
+    symbol: "♫",
+    background: `linear-gradient(135deg, ${color}, #eaf7ff)`,
+    border: "2px solid #a9cde5"
+  },
+  green: {
+    symbol: "☘",
+    background: `linear-gradient(135deg, ${color}, #eff8e9)`,
+    border: "2px solid #a9c99a"
+  },
+  yellow: {
+    symbol: "☼",
+    background: `linear-gradient(135deg, ${color}, #fff9df)`,
+    border: "2px solid #e8d58b"
+  }
+};
+
+      const design = designs[style] || designs.coquette;
+
+      player.style.cssText = `
+        margin-top: 22px;
+        padding: 18px;
+        border-radius: 18px;
+        background: ${design.background};
+        border: ${design.border};
+        color: #654b60;
+        box-sizing: border-box;
+        width: 100%;
+      `;
+
+      const decoration = document.createElement("div");
+      decoration.textContent = design.symbol;
+      decoration.style.cssText = `
+        font-size: 25px;
+        margin-bottom: 5px;
+      `;
+
+      const songTitle = document.createElement("strong");
+      songTitle.textContent = post.audio_title || "A little song";
+      songTitle.style.cssText = `
+        display: block;
+        font-size: 16px;
+      `;
+
+      const artist = document.createElement("p");
+      artist.textContent = post.audio_artist || "Unknown artist";
+      artist.style.cssText = `
+        font-size: 12px;
+        margin: 5px 0 12px;
+      `;
+
+      const audio = document.createElement("audio");
+      audio.controls = true;
+      audio.preload = "none";
+      audio.src = post.audio_path;
+      audio.style.cssText = `
+        display: block;
+        width: 100%;
+        max-width: 100%;
+      `;
+
+      player.append(decoration, songTitle, artist, audio);
+      article.appendChild(player);
+    }
+
+    // EDIT POST BUTTON
+    const editButton = document.createElement("button");
+    editButton.textContent = "Edit Post ✎";
+
+    editButton.style.cssText = `
+      margin-top: 15px;
+      margin-right: 8px;
+      padding: 9px 16px;
+      border: 1px solid #a9c99a;
+      border-radius: 12px;
+      background: #eff8e9;
+      color: #54734b;
+      cursor: pointer;
+      font-family: inherit;
+    `;
+
+    editButton.addEventListener("click", async () => {
+      const { data: { user } } = await supabaseClient.auth.getUser();
+
+      if (!user || user.id !== ADMIN_UID) {
+        alert("You are not allowed to edit this post.");
+        return;
+      }
+
+      const newTitle = prompt("Edit post title:", post.title || "");
+if (newTitle === null) return;
+
+const newBody = prompt("Edit your caption:", post.body || "");
+if (newBody === null) return;
+
+      if (!newTitle.trim() || !newBody.trim()) {
+        alert("Title and story cannot be empty.");
+        return;
+      }
+
+      editButton.disabled = true;
+      editButton.textContent = "Saving...";
+
+      const { error } = await supabaseClient
+        .from("posts")
+        .update({
+          title: newTitle.trim(),
+          body: newBody.trim(),
+          updated_at: new Date().toISOString()
+        })
+        .eq("id", post.id)
+        .eq("owner_id", user.id);
+
+      if (error) {
+        alert("Could not edit post: " + error.message);
+        editButton.disabled = false;
+        editButton.textContent = "Edit Post ✎";
+        return;
+      }
+
+      alert("Memory updated successfully! ♡");
+      loadPosts();
+    });
+
+    // DELETE POST BUTTON
+    const deleteButton = document.createElement("button");
+    deleteButton.textContent = "Delete Post ♡";
+
+    deleteButton.style.cssText = `
+      margin-top: 15px;
+      padding: 9px 16px;
+      border: 1px solid #e5a5b5;
+      border-radius: 12px;
+      background: #fff0f3;
+      color: #a64d68;
+      cursor: pointer;
+      font-family: inherit;
+    `;
+
+    deleteButton.addEventListener("click", async () => {
+      const { data: { user } } = await supabaseClient.auth.getUser();
+
+      if (!user || user.id !== ADMIN_UID) {
+        alert("You are not allowed to delete this post.");
+        return;
+      }
+
+      if (!confirm("Delete this memory?")) return;
+
+      deleteButton.disabled = true;
+
+      const { error } = await supabaseClient
+        .from("posts")
+        .delete()
+        .eq("id", post.id)
+        .eq("owner_id", user.id);
+
+      if (error) {
+        alert(error.message);
+        deleteButton.disabled = false;
+        return;
+      }
+
+      article.remove();
+    });
+
+    // Only show button to admin
+    supabaseClient.auth.getUser().then(({ data }) => {
+  if (data.user && data.user.id === ADMIN_UID) {
+    article.appendChild(editButton);
+    article.appendChild(deleteButton);
+  }
+});
+
+
+    // COMMENTS
+    const commentsArea = document.createElement("div");
+    commentsArea.className = "comments-area";
+
+    article.appendChild(commentsArea);
+    container.appendChild(article);
+
+    loadComments(post.id, commentsArea);
+  });
+}
+
+
+/* =========================
+   LOAD WEBSITE CONTENT
+========================= */
+
+async function loadProfile() {
+  const { data, error } = await supabaseClient
+    .from("site_profile")
+    .select("*")
+    .eq("id", 1)
+    .maybeSingle();
+
+  if (error) {
+    console.error("Profile loading error:", error);
+    return;
+  }
+
+  if (!data) return;
+
+  document.getElementById("profile-name").textContent =
+    data.display_name || "Camie";
+
+  document.getElementById("profile-username").textContent =
+    data.username ? "@" + data.username.replace(/^@/, "") : "@camie";
+
+  document.getElementById("profile-bio").textContent =
+    data.bio || "";
+
+  if (data.avatar_path) {
+    document.getElementById("profile-avatar").src =
+      data.avatar_path;
+  }
+
+  if (data.hero_image_url) {
+    document.querySelector(".hero").style.backgroundImage =
+      `linear-gradient(#0003, #0003), url("${data.hero_image_url}")`;
+  }
+}
+
+loadProfile();
+loadPosts();
+
+</script>
+
+  
+<script>
+/* =========================
+   LOAD PROFILE EDITOR
+========================= */
+
+async function loadProfileEditor() {
+  const { data, error } = await supabaseClient
+    .from("site_profile")
+    .select("*")
+    .eq("id", 1)
+    .maybeSingle();
+
+  if (error) {
+    console.error("Profile editor error:", error);
+    return;
+  }
+
+  if (!data) return;
+
+  document.getElementById("profile-edit-name").value =
+    data.display_name || "";
+
+  document.getElementById("profile-edit-username").value =
+    data.username || "";
+
+  document.getElementById("profile-edit-bio").value =
+    data.bio || "";
+}
+
+
+/* =========================
+   UPLOAD PROFILE MEDIA
+========================= */
+
+async function uploadProfileFile(file, user) {
+  if (!file) return null;
+
+  if (!file.type.startsWith("image/")) {
+    throw new Error("Please choose an image file.");
+  }
+
+  if (file.size > 8 * 1024 * 1024) {
+    throw new Error("Image must be smaller than 8 MB.");
+  }
+
+  const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+
+  const path =
+    `${user.id}/profile-${Date.now()}-${Math.random().toString(36).slice(2)}-${safeName}`;
+
+  const { error } = await supabaseClient
+    .storage
+    .from("Diary-file")
+    .upload(path, file, {
+      cacheControl: "3600",
+      upsert: false
+    });
+
+  if (error) throw error;
+
+  const { data } = supabaseClient
+    .storage
+    .from("Diary-file")
+    .getPublicUrl(path);
+
+  return data.publicUrl;
+}
+
+
+/* =========================
+   SAVE PROFILE
+========================= */
+
+document.getElementById("profile-form").addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const message = document.getElementById("profile-message");
+  const button = event.target.querySelector('button[type="submit"]');
+
+  button.disabled = true;
+  message.textContent = "Saving your profile... ♡";
+
+  try {
+    const { data: sessionData, error: sessionError } =
+      await supabaseClient.auth.getSession();
+
+    if (sessionError) throw sessionError;
+
+    const user = sessionData.session?.user;
+
+    if (!user || user.id !== ADMIN_UID) {
+      throw new Error("Please login as the website owner.");
+    }
+
+    const { data: oldProfile, error: readError } = await supabaseClient
+      .from("site_profile")
+      .select("*")
+      .eq("id", 1)
+      .maybeSingle();
+
+    if (readError) throw readError;
+    if (!oldProfile) throw new Error("Profile row not found.");
+
+    const avatarFile =
+      document.getElementById("profile-edit-avatar").files[0];
+
+    const heroFile =
+      document.getElementById("profile-edit-hero").files[0];
+
+    const avatarUrl = avatarFile
+      ? await uploadProfileFile(avatarFile, user)
+      : oldProfile.avatar_path;
+
+    const heroUrl = heroFile
+      ? await uploadProfileFile(heroFile, user)
+      : oldProfile.hero_image_url;
+
+    const updates = {
+      display_name: document.getElementById("profile-edit-name").value.trim(),
+      username: document.getElementById("profile-edit-username").value.trim(),
+      bio: document.getElementById("profile-edit-bio").value.trim(),
+      avatar_path: avatarUrl,
+      hero_image_url: heroUrl,
+      updated_at: new Date().toISOString()
+    };
+
+    const { error: updateError } = await supabaseClient
+      .from("site_profile")
+      .update(updates)
+      .eq("id", 1);
+
+    if (updateError) throw updateError;
+
+    await loadProfile();
+    await loadProfileEditor();
+
+    document.getElementById("profile-edit-avatar").value = "";
+    document.getElementById("profile-edit-hero").value = "";
+
+    message.textContent = "Profile updated successfully! ♡";
+
+  } catch (error) {
+    console.error("Profile save error:", error);
+    message.textContent = "Error: " + error.message;
+
+  } finally {
+    button.disabled = false;
+  }
+});
+</script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  async function loadTheme() {
+    const { data, error } = await supabaseClient
+      .from("site_profile")
+      .select("theme_color, font_family, font_color")
+      .eq("id", 1)
+      .single();
+
+    if (error || !data) {
+      console.error("Theme loading error:", error);
+      return;
+    }
+
+    applyTheme(
+      data.theme_color || "#f8dce5",
+      data.font_family || "DM Sans",
+      data.font_color || "#6b4b55"
+    );
+
+    document.getElementById("theme-color").value =
+      data.theme_color || "#f8dce5";
+
+    document.getElementById("font-family").value =
+      data.font_family || "DM Sans";
+
+    document.getElementById("font-color").value =
+      data.font_color || "#6b4b55";
+  }
+
+  function applyTheme(themeColor, fontFamily, fontColor) {
+    document.documentElement.style.setProperty(
+      "--theme-color", themeColor
+    );
+    document.documentElement.style.setProperty(
+      "--font-family", `"${fontFamily}", sans-serif`
+    );
+    document.documentElement.style.setProperty(
+      "--font-color", fontColor
+    );
+  }
+
+  document.getElementById("theme-form").addEventListener(
+    "submit", async function(e) {
+      e.preventDefault();
+
+      const message = document.getElementById("theme-message");
+      message.textContent = "Saving...";
+
+      const { data: sessionData, error: sessionError } =
+        await supabaseClient.auth.getSession();
+
+      const user = sessionData?.session?.user;
+
+      if (sessionError || !user || user.id !== ADMIN_UID) {
+        message.textContent = "Please log in as Camie first!";
+        return;
+      }
+
+      const themeColor = document.getElementById("theme-color").value;
+      const fontFamily = document.getElementById("font-family").value;
+      const fontColor = document.getElementById("font-color").value;
+
+      const { error } = await supabaseClient
+        .from("site_profile")
+        .update({
+          theme_color: themeColor,
+          font_family: fontFamily,
+          font_color: fontColor
+        })
+        .eq("id", 1);
+
+      if (error) {
+        message.textContent = "Oops! " + error.message;
+        return;
+      }
+
+      applyTheme(themeColor, fontFamily, fontColor);
+      message.textContent = "Appearance saved successfully! ♡";
+    }
+  );
+
+  loadTheme();
+
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const commentForm = document.getElementById("comment-form");
+  const commentsList = document.getElementById("comments-list");
+
+ 
+async function loadComments() {
+  const { data, error } = await supabaseClient
+    .from("comments")
+    .select("*")
+    .order("created_at", { ascending: false });
+
+  if (error) {
+    console.error("Comment loading error:", error);
+    commentsList.textContent = "Comments could not be loaded.";
+    return;
+  }
+
+  commentsList.replaceChildren();
+
+  data.forEach(comment => {
+    const item = document.createElement("div");
+    item.className = "comment-item";
+
+    item.style.setProperty("display", "block", "important");
+    item.style.setProperty("width", "100%", "important");
+    item.style.setProperty("box-sizing", "border-box", "important");
+    item.style.setProperty("background", "#fff5f8", "important");
+    item.style.setProperty("border", "2px solid #e8b9ca", "important");
+    item.style.setProperty("border-radius", "18px", "important");
+    item.style.setProperty("padding", "20px", "important");
+    item.style.setProperty("margin", "15px 0", "important");
+    item.style.setProperty("box-shadow", "0 4px 12px rgba(180,120,145,0.18)", "important");
+
+    const name = document.createElement("strong");
+    name.textContent = comment.name || "Anonymous";
+
+    const body = document.createElement("p");
+    body.textContent = comment.body;
+
+    item.append(name, body);
+    commentsList.appendChild(item);
+  });
+}
+
+  commentForm.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("comment-name").value.trim();
+    const body = document.getElementById("comment-body").value.trim();
+    const button = commentForm.querySelector("button");
+
+    if (!body) return;
+
+    button.disabled = true;
+    button.textContent = "Sending...";
+
+    const { error } = await supabaseClient
+      .from("comments")
+      .insert({
+        name: name || "Anonymous",
+        body: body
+      });
+
+    if (error) {
+      alert("Oops! " + error.message);
+    } else {
+      commentForm.reset();
+      await loadComments();
+    }
+
+    button.disabled = false;
+    button.textContent = "Send Comment ♡";
+  });
+
+  loadComments();
+
+});
+</script>
+
+  
+</body>
+</html> 
+
